@@ -1,0 +1,6 @@
+Model,Spearman_rho,p_value,Top5_overlap,Top10_overlap,N_features_matched,Agreement
+Decision Tree,0.861,0.0,4/5 (80%),9/10 (90%),19,Strong
+EBM,0.618,0.0082,3/5 (60%),7/10 (70%),17,Moderate
+Random Forest,0.598,0.0068,4/5 (80%),7/10 (70%),19,Moderate
+XGBoost,0.87,0.0,3/5 (60%),9/10 (90%),19,Strong
+Logistic Regression,0.961,0.0,5/5 (100%),10/10 (100%),17,Excellent
