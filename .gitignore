@@ -1,6 +1,5 @@
-data/MalMem2022.csv
-.ipynb_checkpoints/
+*.joblib
 __pycache__/
+.ipynb_checkpoints/
 .DS_Store
-*.pyc
-.venv/
+*.csv
