@@ -1,5 +1,5 @@
-*.joblib
-__pycache__/
+.venv/
 .ipynb_checkpoints/
+__pycache__/
 .DS_Store
-*.csv
+*.pyc
