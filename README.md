@@ -34,22 +34,22 @@ This project implements and compares **five machine learning models** — Decisi
 ## Project Structure
 
 ```
-b01830427-MSc-project-ransomware-detection/
+b01830427-MSc-project-explainable-ml-ransomware-detection/
 │
-├── 04_Features/               # Preprocessed and selected feature datasets
+├── Features/               # Preprocessed and selected feature datasets
 │   ├── X_train_selected.csv
 │   ├── X_test_selected.csv
 │   ├── y_train.csv
 │   └── y_test.csv
 │
-├── 05_Models/                 # Saved trained models
+├── Models/                 # Saved trained models
 │   ├── dt_model.joblib
 │   ├── ebm_model.joblib
 │   ├── rf_model.joblib
 │   ├── xgb_model.joblib
 │   └── lr_model.joblib
 │
-├── 06_Results/                # Evaluation outputs, tables, and figures
+├── Results/                # Evaluation outputs, tables, and figures
 │   ├── confusion_matrices_all.png
 │   ├── roc_curves_all.png
 │   ├── precision_recall_curves.png
@@ -63,7 +63,7 @@ b01830427-MSc-project-ransomware-detection/
 │   ├── lime_rankings_all_models.csv
 │   └── shap_lime_consistency.csv
 │
-├── 07_Code/                   # Jupyter notebooks (6 sequential phases)
+├── Code/                   # Jupyter notebooks (6 sequential phases)
 │   ├── 01_Data_Loading_and_Preprocessing.ipynb
 │   ├── 02_Feature_Selection.ipynb
 │   ├── 03_Model_Training.ipynb
@@ -172,7 +172,7 @@ Cross-method agreement between SHAP and LIME is measured using **Spearman rank c
 
 ## Results
 
-Results are saved in `06_Results/`. Key outputs include:
+Results are saved in `Results/`. Key outputs include:
 
 - Accuracy, Precision, Recall, F1-Score, ROC-AUC, PR-AUC per model
 - Confusion matrices (all 5 models)
@@ -218,8 +218,9 @@ scipy
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/saneeshghimire/b01830427-MSc-project-ransomware-detection.git
-cd b01830427-MSc-project-ransomware-detection
+git clone https://github.com/saneeshghimire/b01830427-MSc-project-explainable-ml-ransomware-detection
+
+cd b01830427-MSc-project-explainable-ml-ransomware-detection
 ```
 
 ### 2. Create a Virtual Environment
@@ -253,7 +254,7 @@ Run the notebooks in `07_Code/` sequentially:
 ### Step 1 — Data Loading and Preprocessing
 
 ```bash
-jupyter notebook 07_Code/01_Data_Loading_and_Preprocessing.ipynb
+jupyter Code/01_Data_Loading_and_Preprocessing.ipynb
 ```
 
 Loads the CSV, performs a data quality audit, encodes the target, and creates a stratified 80/20 train-test split with `StandardScaler`.
@@ -261,7 +262,7 @@ Loads the CSV, performs a data quality audit, encodes the target, and creates a 
 ### Step 2 — Feature Selection
 
 ```bash
-jupyter notebook 07_Code/02_Feature_Selection.ipynb
+jupyter Code/02_Feature_Selection.ipynb
 ```
 
 Reduces 55 features to 20 using correlation filtering, Mutual Information, RFECV, and SHAP-based consensus ranking.
@@ -269,7 +270,7 @@ Reduces 55 features to 20 using correlation filtering, Mutual Information, RFECV
 ### Step 3 — Model Training
 
 ```bash
-jupyter notebook 07_Code/03_Model_Training.ipynb
+jupyter Code/03_Model_Training.ipynb
 ```
 
 Trains and tunes all 5 models with `GridSearchCV` and 5-fold cross-validation, then generates performance comparison tables and figures.
@@ -277,7 +278,7 @@ Trains and tunes all 5 models with `GridSearchCV` and 5-fold cross-validation, t
 ### Step 4 — SHAP Analysis
 
 ```bash
-jupyter notebook 07_Code/04_SHAP_Analysis.ipynb
+jupyter Code/04_SHAP_Analysis.ipynb
 ```
 
 Generates global and local SHAP explanations for all 5 models.
@@ -285,7 +286,7 @@ Generates global and local SHAP explanations for all 5 models.
 ### Step 5 — LIME Analysis
 
 ```bash
-jupyter notebook 07_Code/05_LIME_Analysis.ipynb
+jupyter Code/05_LIME_Analysis.ipynb
 ```
 
 Generates local LIME explanations for all 5 models and saves feature rankings.
@@ -293,7 +294,7 @@ Generates local LIME explanations for all 5 models and saves feature rankings.
 ### Step 6 — Cross-Method Consistency
 
 ```bash
-jupyter notebook 07_Code/06_Cross_Method_Consistency.ipynb
+jupyter Code/06_Cross_Method_Consistency.ipynb
 ```
 
 Compares SHAP and LIME feature rankings using Spearman correlation and top-k overlap, producing the final dual-criterion comparison table.
