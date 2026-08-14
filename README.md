@@ -62,6 +62,7 @@ b01830427-MSc-project-explainable-ml-ransomware-detection/
 │   ├── figures/
 │   │   ├── category_distribution.png
 │   │   ├── confusion_matrices_all.png
+│   │   ├── dual_criterion_comparison.png
 │   │   ├── feature_importance_RF.png
 │   │   ├── lime_explanation_RF.png
 │   │   ├── mutual_information_scores.png
@@ -198,6 +199,7 @@ Results are saved in `results/`, organised into `figures/`, `shap_plots/`, and `
 |---|---|
 | `category_distribution.png` | Class/category distribution in the raw dataset |
 | `confusion_matrices_all.png` | Confusion matrices for all 5 models |
+| `dual_criterion_comparison.png` | dual criteria comparison of SHAP & LIME |
 | `feature_importance_RF.png` | Random Forest intrinsic feature importance |
 | `lime_explanation_RF.png` | LIME local explanation for a single prediction (Random Forest) |
 | `mutual_information_scores.png` | Mutual Information scores from feature selection |
